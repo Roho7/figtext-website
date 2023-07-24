@@ -1,0 +1,38 @@
+@import url("https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,400&f[]=general-sans@400&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  @apply bg-whale-800 overflow-x-hidden w-full;
+}
+
+.glass {
+  @apply h-full w-full bg-whale-800 rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-30;
+}
+.glass2 {
+  @apply h-full w-full bg-alga-500 rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20;
+}
+
+h1 {
+  @apply text-white font-display text-8xl font-medium;
+}
+
+h2 {
+  @apply text-white font-display text-4xl font-extralight;
+}
+
+h3 {
+  @apply text-gray-300 font-sans text-xl;
+}
+
+p {
+  @apply text-white;
+}
+button {
+  @apply flex items-center gap-4 w-32 whitespace-nowrap px-4 py-2 my-4 text-whale-800 font-bold bg-alga-500 rounded-full;
+}
