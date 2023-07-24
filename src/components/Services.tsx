@@ -29,7 +29,7 @@ const ServiceArray: Service[] = [
 
 function Services() {
   return (
-    <div className="flex flex-col gap-4 mx-4 mb-32">
+    <div className="flex flex-col gap-4 mx-4 mb-32 services">
       {ServiceArray.map((service) => {
         return (
           <motion.div
@@ -44,7 +44,9 @@ function Services() {
             </div>
             <div className="flex flex-col gap-4">
               <p>{service.about}</p>
-              <span className="text-white underline ">show me</span>
+              <span className="text-white underline hover:text-alga-500 cursor-pointer">
+                show more
+              </span>
             </div>
           </motion.div>
         );

@@ -34,5 +34,8 @@ p {
   @apply text-white;
 }
 button {
-  @apply flex items-center gap-4 w-32 whitespace-nowrap px-4 py-2 my-4 text-whale-800 font-bold bg-alga-500 rounded-full;
+  @apply flex items-center gap-4 max-w-max whitespace-nowrap px-4 py-2 my-4 text-whale-800 font-bold bg-alga-500 rounded-full hover:gap-6 transition-all ease-linear;
+}
+.selected-tab {
+  @apply text-3xl cursor-pointer gap-4 relative;
 }

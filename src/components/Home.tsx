@@ -9,7 +9,7 @@ function Home() {
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: false }}
-        transition={{ duration: 1, type: "spring" }}
+        transition={{ duration: 1, type: "tween" }}
       >
         <h1>
           Web Solutions for <h1 className="text-whale-500">businesses</h1>
@@ -19,14 +19,19 @@ function Home() {
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: false }}
-        transition={{ delay: 0.4, duration: 1, type: "spring" }}
+        transition={{ delay: 0.4, duration: 1, type: "tween" }}
       >
         <h2>Elevate your online presence.</h2>
       </motion.div>
       <button>
         show me <AiOutlineArrowRight />
       </button>
-      <img src={blob1} alt="" className="absolute top-0 -z-10" />
+      <motion.div
+        animate={{ opacity: [0, 100] }}
+        transition={{ ease: "ease", duration: 10 }}
+      >
+        <img src={blob1} alt="" className="absolute top-0 -z-10" />
+      </motion.div>
     </div>
   );
 }

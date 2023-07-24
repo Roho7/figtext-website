@@ -40,7 +40,7 @@ const priceArray: Price[] = [
 
 function Pricing() {
   return (
-    <div className="flex mx-4 gap-4 mb-32">
+    <div className="flex mx-4 gap-4 mb-32 pricing">
       {priceArray.map((price) => {
         return (
           <motion.div
