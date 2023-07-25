@@ -25,8 +25,8 @@ const aboutList: about[] = [
 function About() {
   const [selectedTab, setSelectedTab] = useState(aboutList[0]);
   return (
-    <div className="mx-16 mb-32 grid grid-cols-3 about-us">
-      <div className=" col-span-2">
+    <div className="mx-16 mb-32 grid grid-col-1 md:grid-cols-3 about-us">
+      <div className=" md:col-span-2">
         <p className="mb-16">
           We're not just another web solutions provider; we're a young and
           dynamic team bursting with boundless energy and passion for
@@ -34,8 +34,8 @@ function About() {
           boundaries of creativity to deliver cutting-edge solutions for
           businesses and individuals like you.
         </p>
-        <div className="flex justify-evenly">
-          <ul>
+        <div className="md:flex justify-evenly">
+          <ul className="m-3">
             {aboutList.map((item) => {
               return (
                 <li
@@ -63,7 +63,7 @@ function About() {
               );
             })}
           </ul>
-          <div className=" bg-whale-900 p-4 max-w-md max-h-24">
+          <div className=" glass p-4">
             <AnimatePresence mode="wait">
               <motion.div
                 key={selectedTab ? selectedTab.title : "empty"}
@@ -79,7 +79,7 @@ function About() {
           </div>
         </div>
       </div>
-      <img src={aboutImg} alt="" />
+      <img src={aboutImg} alt="" className="h-full w-full object-contain" />
     </div>
   );
 }

@@ -8,9 +8,11 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
-  @apply bg-whale-800 overflow-x-hidden w-full;
+  @apply bg-whale-800 overflow-x-hidden w-screen relative;
 }
-
+body {
+  overflow-x: hidden;
+}
 .glass {
   @apply h-full w-full bg-whale-800 rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-30;
 }
@@ -19,7 +21,7 @@
 }
 
 h1 {
-  @apply text-white font-display text-8xl font-medium;
+  @apply text-white font-display text-5xl md:text-6xl lg:text-8xl font-medium;
 }
 
 h2 {
@@ -38,4 +40,17 @@ button {
 }
 .selected-tab {
   @apply text-3xl cursor-pointer gap-4 relative;
+}
+.navbar-mob {
+  @apply fixed h-screen w-1/2 z-50 right-0 top-0 bg-whale-800 rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-30;
+}
+label {
+  @apply text-white;
+}
+input,
+textarea {
+  @apply p-1 glass2 text-white mb-2;
+}
+td {
+  @apply flex flex-col;
 }

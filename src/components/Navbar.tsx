@@ -1,41 +1,25 @@
-import { useRef, useState } from "react";
 import logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
-
-interface nav {
-  name: string;
-  link: string;
-}
-
-const navLinks: nav[] = [
-  {
-    name: "services",
-    link: "services",
-  },
-  {
-    name: "pricing",
-    link: "pricing",
-  },
-  {
-    name: "about us",
-    link: "about-us",
-  },
-  {
-    name: "contact us",
-    link: "contact-us",
-  },
-];
+import { navLinks } from "../json/navlinks";
 
 function Navbar() {
+  function scrollToDiv(link: any) {
+    const selectedDiv = document.querySelector(`.${link}`);
+    console.log(selectedDiv);
+
+    selectedDiv?.scrollIntoView({ behavior: "smooth" });
+  }
   return (
     <div className="p-4 flex font-sans text-white items-center justify-between">
       <img src={logo} alt="" className=" object-cover w-20 h-full" />
-      <div className="flex gap-10">
+      <div className="gap-10 md:flex hidden">
         {navLinks.map((item) => {
           return (
-            <Link to={item.link}>
-              <span className="hover:text-alga-500">{item.name}</span>
-            </Link>
+            <span
+              className="hover:text-alga-500 cursor-pointer"
+              onClick={() => scrollToDiv(item.link)}
+            >
+              {item.name}
+            </span>
           );
         })}
       </div>

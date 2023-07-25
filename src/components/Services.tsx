@@ -40,10 +40,10 @@ function Services() {
           >
             <div className="flex flex-col justify-between col-span-2">
               <h3>{service.number}</h3>
-              <h1 className="text-6xl">{service.name}</h1>
+              <h1 className="text-4xl lg:text-6xl">{service.name}</h1>
             </div>
             <div className="flex flex-col gap-4">
-              <p>{service.about}</p>
+              <p className="text-sm md:text-md">{service.about}</p>
               <span className="text-white underline hover:text-alga-500 cursor-pointer">
                 show more
               </span>
@@ -51,11 +51,7 @@ function Services() {
           </motion.div>
         );
       })}
-      <img
-        src={blob1}
-        alt=""
-        className="absolute h-full w-full -z-10 -right-10"
-      />
+      <img src={blob1} alt="" className="absolute h-full w-full -z-10" />
     </div>
   );
 }

@@ -30,7 +30,11 @@ function Home() {
         animate={{ opacity: [0, 100] }}
         transition={{ ease: "ease", duration: 10 }}
       >
-        <img src={blob1} alt="" className="absolute top-0 -z-10" />
+        <img
+          src={blob1}
+          alt=""
+          className="absolute top-10 md:top-0 -z-10 scale-150 md:scale-100"
+        />
       </motion.div>
     </div>
   );
