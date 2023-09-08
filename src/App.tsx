@@ -10,7 +10,7 @@ import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div className="relative">
+    <>
       <Navbar />
       <MobileNav />
       <Home />
@@ -22,7 +22,7 @@ function App() {
       <About />
       <Dividers name={"Contact Us"} />
       <Contact />
-    </div>
+    </>
   );
 }
 

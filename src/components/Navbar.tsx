@@ -9,7 +9,7 @@ function Navbar() {
     selectedDiv?.scrollIntoView({ behavior: "smooth" });
   }
   return (
-    <div className="p-4 flex font-sans text-white items-center justify-between">
+    <div className="absolute p-4 md:px-8 w-screen flex font-sans text-white items-center justify-between">
       <img src={logo} alt="" className=" object-cover w-20 h-full" />
       <div className="gap-10 md:flex hidden">
         {navLinks.map((item) => {

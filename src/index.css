@@ -4,14 +4,13 @@
 @tailwind utilities;
 
 :root {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
-  @apply bg-whale-800 overflow-x-hidden w-screen relative;
+  @apply bg-whale-800 overflow-x-hidden w-screen overflow-auto;
 }
 body {
-  overflow-x: hidden;
+  position: relative;
+  overflow: hidden;
+  @apply h-full;
 }
 .glass {
   @apply h-full w-full bg-whale-800 rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-30;

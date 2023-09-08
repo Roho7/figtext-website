@@ -9,7 +9,7 @@ function MobileNav() {
   return (
     <>
       <div
-        className="md:hidden max-w-max p-2 absolute top-4 right-4 bg-alga-500 text-whale-800 bg-opacity-70 z-50"
+        className="md:hidden max-w-max p-2 fixed top-4 right-4 bg-alga-500 text-whale-800 bg-opacity-70 z-50"
         onClick={() => setIsActive(!isActive)}
       >
         <AiOutlineMenu />
